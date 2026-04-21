@@ -2,7 +2,6 @@ package com.praktikumDB.deploy.service;
 
 import com.praktikumDB.deploy.model.User;
 import com.praktikumDB.deploy.repository.UserRepository;
-import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
