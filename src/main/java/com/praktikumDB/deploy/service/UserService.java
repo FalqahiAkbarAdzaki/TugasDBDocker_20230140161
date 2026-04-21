@@ -5,6 +5,7 @@ import com.praktikumDB.deploy.repository.UserRepository;
 import org.springframework.boot.webmvc.autoconfigure.WebMvcProperties;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -20,8 +21,12 @@ public class UserService {
         return userRepository.save(request);
     }
 
+    public List <User> getAllUsers(){
+        return userRepository.findAll();
+    }
+
     public User getUserByID(String id){
-        return UserRepository.findById(id).orElse(null);
+        return userRepository.findById(id).orElse(null);
     }
 
     public User updateUser(String id, User request) {
